@@ -1,0 +1,376 @@
+:root {
+    font-size: 100%;
+    --primary-color: linear-gradient(to right, #8e2de2, #4a00e0);
+    --secondary-color: #3f3d55;
+}
+
+html,
+body {
+    font-family: 'Lato', sans-serif;
+    background: var(--primary-color);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* header styles */
+.head-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.head-content {
+    display: flex;
+    justify-content: center;
+    padding: 4px 32px 2px 34px;
+    font-family: 'Josefin Sans', sans-serif;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    color: var(--secondary-color);
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+}
+
+.head-content > img {
+    margin: 0 0 0 15px;
+}
+
+/* login/registration styles */
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 200px 0 0 0;
+}
+
+.form-wrap {
+    background: #fff;
+    padding: 25px 30px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    width: 450px;
+    margin: 0 20px;
+}
+
+.form-wrap > h2 {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.form-style {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-style > input {
+    border: 0;
+    border-bottom: 1.4px solid #d1d1d1;
+    outline: none;
+    margin: 20px 0;
+    padding: 6px 5px;
+}
+
+.form-style > input:focus {
+    border-bottom: 1.4px solid #b25aff;
+}
+
+.form-style > button {
+    color: #fff;
+    font-size: 1.03em;
+    background: var(--primary-color);
+    border: 0;
+    margin: 10px 0 20px 0;
+    padding: 8px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form-style > button:hover {
+    background: var(--secondary-color);
+}
+
+.form-style > button:focus {
+    outline: none;
+}
+
+.form-wrap > div {
+    text-align: right;
+}
+
+.form-wrap > div > a {
+    margin: 0 0 0 6px;
+    text-decoration: none;
+}
+
+.form-wrap > div > a:focus {
+    outline: none;
+}
+
+.form-wrap > div > a:hover {
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 0 0 5px 0;
+}
+
+/* notes page styles */
+.notes-head-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 15px 0 15px 0;
+}
+
+.notes-head-content > h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--secondary-color);
+    margin: 0 0 0 20px;
+    font-size: 1.6rem;
+}
+
+.notes-head-content > a {
+    color: #fff;
+    text-decoration: none;
+    background: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 6px;
+    margin: 0 20px 0 0;
+}
+
+.notes-head-content > a:hover {
+    background: var(--secondary-color);
+}
+
+.note-list {
+    padding: 30px;
+}
+
+.note {
+    background: #fff;
+    margin: 15px 20px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.note-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0 0 10px 0;
+}
+
+.note-date {
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    color: #8a8a8a;
+    margin: 10px 0 0 0;
+}
+
+/* toggle note modal */
+.toggle-note {
+    position: fixed;
+    right: 25px;
+    bottom: 35px;
+    border: 0;
+    background: #e71d45;
+    color: #fff;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+    font-size: 1.6rem;
+    border-radius: 50%;
+    padding: 18px 23px 17px 22px;
+    cursor: pointer;
+}
+
+.toggle-note:hover {
+    background: #47455f;
+}
+
+.toggle-note:focus {
+    outline: none;
+}
+
+.note-bg {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(50, 49, 75, 0.5);
+}
+
+.hide {
+    display: none;
+}
+
+.note-body {
+    position: absolute;
+    margin: auto;
+    left: 20px;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    max-width: 800px;
+    height: 475px;
+    border-radius: 12px;
+    background: #fff;
+    padding: 20px;
+}
+
+.close-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+}
+
+.close-wrap > div {
+    color: var(--secondary-color);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.close-wrap > button {
+    border: 0;
+    background: #fff;
+    cursor: pointer;
+}
+
+.close-wrap > button:hover {
+    color: #ee5271;
+}
+
+.close-wrap > button:focus {
+    outline: none;
+}
+
+.close-wrap > button > i {
+    color: #f0234c;
+    font-size: 1.2rem;
+}
+
+.note-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-note {
+    color: #fff;
+    font-size: 1.03em;
+    background: var(--primary-color);
+    border: 0;
+    margin: 30px 0 0 0;
+    padding: 8px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.create-note:hover {
+    background: var(--secondary-color);
+}
+
+.create-note:focus {
+    outline: none;
+}
+
+.note-title-input {
+    border: 0;
+    border-bottom: 1.4px solid #d1d1d1;
+    outline: none;
+    padding: 6px 10px;
+    margin: 0 0 20px 0;
+}
+
+.note-title-input:focus {
+    border-bottom: 1px solid #b25aff;
+}
+
+.note-content-input {
+    outline: none;
+    border: 0;
+    border: 1px solid #d1d1d1;
+    padding: 10px;
+}
+
+.note-content-input:focus {
+    border: 1px solid #b25aff;
+}
+
+/* error display */
+.error-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-container > h1 {
+    color: #fff;
+    letter-spacing: 0.1rem;
+}
+
+.error-msg {
+    color: #fff;
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+}
+
+/* media queries */
+@media (max-width: 1366px) {
+    .main-wrapper {
+        margin: 120px 0 0 0;
+    }
+}
+
+@media (max-width: 580px) {
+    .main-wrapper {
+        margin: 100px 0 0 0;
+    }
+
+    .note-list {
+        padding: 10px;
+    }
+
+    .note {
+        margin: 10px 10px 20px 10px;
+    }
+
+    .toggle-note {
+        font-size: 1.4rem;
+        padding: 17px 21px 17px 21px;
+    }
+}
+
+/* swal styles */
+.swal2-confirm {
+    background: var(--primary-color) !important;
+    border: none !important;
+    border-left-color: #fff !important;
+    padding: 6px 18px !important;
+    font-size: 0.9em !important;
+    border-radius: 5px !important;
+}
+
+.swal2-confirm:hover {
+    background: var(--secondary-color) !important;
+}
+
+.swal2-styled:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.swal2-title {
+    font-size: 1em !important;
+    font-weight: normal !important;
+    letter-spacing: 0.05em;
+    font-stretch: expanded;
+    margin-top: 10px;
+}
