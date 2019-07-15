@@ -25,7 +25,6 @@ const UserSchema = new mongoose.Schema({
 });
 
 //using statics property(specific to mongoose) to define custom method
-//authUser is a method
 UserSchema.statics.authUser = function(username, password, callback) {
     //sending query to check if user is in db
     User.findOne({ username: username }, function(err, user) {
