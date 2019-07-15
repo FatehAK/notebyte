@@ -1,5 +1,5 @@
 # Notebyte
-Notebyte is a simple note taking web app with built in authentication and session management. It uses Node.js for its backend and the routes are managed by ExpressJS. It makes note creation easy with added timestamps and the notes are stored on MongoDB.
+Notebyte is a simple note taking web app with built in authentication and session management. It uses Node.js for its backend and the routes are managed by ExpressJS. It makes note creation easy with added timestamps and the notes are stored on MongoDB. The web app is deployed to the Heroku Cloud.
 
 View the app live - https://notebyte.herokuapp.com
 
@@ -9,6 +9,7 @@ View the app live - https://notebyte.herokuapp.com
 * MongoDB store
 * EJS templating
 * CSS, JavaScript
+* Heroku for hosting
 
 ### Local Development
 To get started developing right away:
