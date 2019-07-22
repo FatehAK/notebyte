@@ -8,7 +8,6 @@ View the app live - https://notebyte.herokuapp.com
 * ExpressJS for routes and session
 * MongoDB store
 * EJS templating
-* CSS, JavaScript
 * Heroku for hosting
 
 ### Local Development
