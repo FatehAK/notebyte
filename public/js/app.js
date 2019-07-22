@@ -18,37 +18,37 @@ if (registerForm) {
     });
 }
 
-const noteForm = document.querySelector('#noteForm');
-if (noteForm) {
-    noteForm.addEventListener('submit', function(evt) {
+const modalForm = document.querySelector('#modalForm');
+if (modalForm) {
+    modalForm.addEventListener('submit', function(evt) {
         evt.preventDefault();
-        const noteTitle = document.querySelector('.note-title-input').value;
-        const noteContent = document.querySelector('.note-content-input').value;
-        if (noteTitle === '' || noteContent === '') {
-            noteBg.classList.remove('hide');
+        const modalTitle = document.querySelector('.modal-title').value;
+        const modalContent = document.querySelector('.modal-content').value;
+        if (modalTitle === '' || modalContent === '') {
+            modalBg.classList.remove('hide');
             Swal.fire('Note must not be empty');
         } else {
-            noteForm.submit();
+            modalForm.submit();
         }
     });
 }
 
 //modal toggling
-const noteBg = document.querySelector('.note-bg');
-const toggleNote = document.querySelector('.toggle-note');
+const modalBg = document.querySelector('.modal-bg');
+const toggleModal = document.querySelector('.toggle-modal');
 const createNote = document.querySelector('.create-note');
 const closeBtn = document.querySelector('.close-btn');
 
-if (toggleNote && noteBg && createNote && closeBtn) {
-    toggleNote.addEventListener('click', function() {
-        noteBg.classList.remove('hide');
+if (toggleModal && modalBg && createNote && closeBtn) {
+    toggleModal.addEventListener('click', function() {
+        modalBg.classList.remove('hide');
     });
 
     createNote.addEventListener('click', function() {
-        noteBg.classList.add('hide');
+        modalBg.classList.add('hide');
     });
 
     closeBtn.addEventListener('click', function() {
-        noteBg.classList.add('hide');
+        modalBg.classList.add('hide');
     });
 }

@@ -94,7 +94,7 @@ app.get('/notes', function(req, res, next) {
 
 //POST /notes
 app.post('/notes', function(req, res, next) {
-    if (req.body.notetitle && req.body.notecontent && req.body.userid) {
+    if (req.body.modaltitle && req.body.modalcontent && req.body.userid) {
         //getting the date
         const date = new Date();
         const day = date.getDate();
@@ -106,8 +106,8 @@ app.post('/notes', function(req, res, next) {
             $push: {
                 notes: [
                     {
-                        title: req.body.notetitle,
-                        content: req.body.notecontent,
+                        title: req.body.modaltitle,
+                        content: req.body.modalcontent,
                         date: dateString
                     }
                 ]

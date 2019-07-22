@@ -1,7 +1,7 @@
 :root {
     font-size: 100%;
-    --primary-color: linear-gradient(to right, #8e2de2, #4a00e0);
-    --secondary-color: #3f3d55;
+    --primary-color: #6ad17b;
+    --secondary-color: #414150;
 }
 
 html,
@@ -23,10 +23,11 @@ body {
     display: flex;
     justify-content: center;
     padding: 4px 32px 2px 34px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Bad Script', cursive;
+    color: #fff;
+    font-size: 1.1rem;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    color: var(--secondary-color);
+    background: var(--secondary-color);
     border-bottom-left-radius: 45px;
     border-bottom-right-radius: 45px;
 }
@@ -54,9 +55,10 @@ body {
 }
 
 .form-wrap > h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: var(--secondary-color);
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Bad Script', cursive;
+    letter-spacing: 0.1rem;
 }
 
 .form-style {
@@ -73,7 +75,7 @@ body {
 }
 
 .form-style > input:focus {
-    border-bottom: 1.4px solid #b25aff;
+    border-bottom: 1.4px solid var(--primary-color);
 }
 
 .form-style > button {
@@ -118,7 +120,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
+    background: var(--secondary-color);
+    color: #fff;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -126,10 +129,11 @@ body {
 }
 
 .notes-head-content > h2 {
-    font-family: 'Josefin Sans', sans-serif;
-    color: var(--secondary-color);
+    font-family: 'Bad Script', cursive;
+    letter-spacing: 0.1rem;
+    color: #fff;
     margin: 0 0 0 20px;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
 }
 
 .notes-head-content > a {
@@ -142,7 +146,7 @@ body {
 }
 
 .notes-head-content > a:hover {
-    background: var(--secondary-color);
+    background: #63c974;
 }
 
 .note-list {
@@ -160,7 +164,7 @@ body {
 .note-title {
     font-weight: bold;
     font-size: 1.2rem;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Bad Script', cursive;
     margin: 0 0 10px 0;
 }
 
@@ -171,13 +175,13 @@ body {
     margin: 10px 0 0 0;
 }
 
-/* toggle note modal */
-.toggle-note {
+/* modal */
+.toggle-modal {
     position: fixed;
     right: 25px;
     bottom: 35px;
     border: 0;
-    background: #e71d45;
+    background: var(--secondary-color);
     color: #fff;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
     font-size: 1.6rem;
@@ -186,29 +190,29 @@ body {
     cursor: pointer;
 }
 
-.toggle-note:hover {
-    background: #47455f;
+.toggle-modal:hover {
+    background: #48485a;
 }
 
-.toggle-note:focus {
+.toggle-modal:focus {
     outline: none;
 }
 
-.note-bg {
+.modal-bg {
     z-index: 10;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(50, 49, 75, 0.5);
+    background: rgba(55, 54, 71, 0.5);
 }
 
 .hide {
     display: none;
 }
 
-.note-body {
+.modal-body {
     position: absolute;
     margin: auto;
     left: 20px;
@@ -230,9 +234,9 @@ body {
 
 .close-wrap > div {
     color: var(--secondary-color);
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Bad Script', cursive;
     font-size: 1.2rem;
-    font-weight: bold;
+    letter-spacing: 0.1rem;
 }
 
 .close-wrap > button {
@@ -254,7 +258,7 @@ body {
     font-size: 1.2rem;
 }
 
-.note-inputs {
+.modal-inputs {
     display: flex;
     flex-direction: column;
 }
@@ -278,7 +282,7 @@ body {
     outline: none;
 }
 
-.note-title-input {
+.modal-title {
     border: 0;
     border-bottom: 1.4px solid #d1d1d1;
     outline: none;
@@ -286,19 +290,19 @@ body {
     margin: 0 0 20px 0;
 }
 
-.note-title-input:focus {
-    border-bottom: 1px solid #b25aff;
+.modal-title:focus {
+    border-bottom: 1px solid var(--primary-color);
 }
 
-.note-content-input {
+.modal-content {
     outline: none;
     border: 0;
     border: 1px solid #d1d1d1;
     padding: 10px;
 }
 
-.note-content-input:focus {
-    border: 1px solid #b25aff;
+.modal-content:focus {
+    border: 1px solid var(--primary-color);
 }
 
 /* error display */
@@ -309,7 +313,7 @@ body {
     justify-content: center;
 }
 
-.error-container > h1 {
+.error-container > h2 {
     color: #fff;
     letter-spacing: 0.1rem;
 }
@@ -342,13 +346,20 @@ body {
         margin: 10px 10px 20px 10px;
     }
 
-    .toggle-note {
+    .toggle-modal {
         font-size: 1.4rem;
         padding: 17px 21px 17px 21px;
     }
 }
 
-/* swal styles */
+/* custom styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px #fff inset !important;
+}
+
 .swal2-confirm {
     background: var(--primary-color) !important;
     border: none !important;

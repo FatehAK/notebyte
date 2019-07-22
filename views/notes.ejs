@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Lato:300,400">
-    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
@@ -24,7 +24,7 @@
             </div>
         </div>
         <%if (notes.length > 0) { %>
-        <div class="note-list">
+        <div class="note-list animated fadeIn faster">
             <% for(let i=0; i < notes.length; i++) { %>
             <div class="note">
                 <div class="note-title"><%= notes[i].title %></div>
@@ -34,21 +34,21 @@
             <% } %>
         </div>
         <% } %>
-        <div class="note-bg hide">
-            <div class="note-body animated fadeIn faster">
+        <div class="modal-bg hide">
+            <div class="modal-body animated fadeIn faster">
                 <div class="close-wrap">
                     <div>New Note</div>
                     <button class="close-btn"><i class="fas fa-times"></i></button>
                 </div>
-                <form id="noteForm" action="/notes" method="POST" class="note-inputs">
-                    <input type="text" class="note-title-input" name="notetitle" placeholder="Title">
+                <form id="modalForm" action="/notes" method="POST" class="modal-inputs">
+                    <input type="text" class="modal-title" name="modaltitle" placeholder="Title">
+                    <textarea class="modal-content" name="modalcontent" cols="40" rows="10" placeholder="Write Something!!"></textarea>
                     <input type="hidden" class="user-id" name="userid" value="<%= currentUser %>">
-                    <textarea class="note-content-input" name="notecontent" cols="40" rows="10" placeholder="Write Something!!"></textarea>
                     <button type="submit" class="create-note">Add</button>
                 </form>
             </div>
         </div>
-        <button class="toggle-note"><i class="fas fa-edit"></i></button>
+        <button class="toggle-modal"><i class="fas fa-edit"></i></button>
         <% } %>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.11.7/dist/sweetalert2.all.min.js"></script>
