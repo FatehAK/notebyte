@@ -326,6 +326,25 @@ body {
     letter-spacing: 0.05rem;
 }
 
+/* footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 10px 0;
+    font-size: 0.9em;
+    font-weight: 100;
+    color: #fff;
+}
+
+.footer > i {
+    color: #f53f64;
+    margin: 0 5px;
+}
+
 /* media queries */
 @media (max-width: 1366px) {
     .main-wrapper {
@@ -349,6 +368,12 @@ body {
     .toggle-modal {
         font-size: 1.4rem;
         padding: 17px 21px 17px 21px;
+    }
+}
+
+@media (max-width: 390px) {
+    .footer {
+        font-size: 0.8em;
     }
 }
 
