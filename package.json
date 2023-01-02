@@ -1,16 +1,54 @@
 {
   "name": "notebyte",
   "version": "1.0.0",
-  "description": "",
+  "description": "Jot down your thoughts with this simple note taking application",
   "main": "js/app.js",
-  "scripts": {},
-  "author": "",
-  "license": "ISC",
+  "author": "fatehak",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FatehAK/notebyte"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "clean": "pnpm rimraf node_modules/.cache",
+    "lint": "concurrently -g -n \"prettier,stylelint,eslint\" -c \"bgGreen.bold,bgMagenta.bold,bgBlue.bold\" \"pnpm prettier-check\" \"pnpm stylelint-check\" \"pnpm eslint-check\"",
+    "lint:fix": "pnpm eslint-fix && pnpm stylelint-fix && pnpm prettier-fix",
+    "prettier-check": "prettier --loglevel warn --cache --cache-strategy content --cache-location ./node_modules/.cache/.prettiercache --check .",
+    "prettier-fix": "prettier --loglevel warn --cache --cache-strategy content --cache-location ./node_modules/.cache/.prettiercache --write .",
+    "stylelint-check": "stylelint --max-warnings=25 --custom-formatter=node_modules/stylelint-formatter-pretty --aei --cache --cache-strategy content --cache-location ./node_modules/.cache/.stylelintcache '{**/*,*}.css'",
+    "stylelint-fix": "pnpm stylelint-check --fix",
+    "eslint-check": "eslint --max-warnings=25 --format=pretty --cache --cache-strategy content --cache-location ./node_modules/.cache/.eslintcache '{**/*,*}.js'",
+    "eslint-fix": "pnpm eslint-check --fix"
+  },
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "ejs": "^2.6.2",
-    "express": "^4.17.1",
-    "express-session": "^1.16.2",
-    "mongoose": "^5.6.6"
-  }
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^5.13.15"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-semistandard": "^17.0.0",
+    "eslint-formatter-pretty": "^4.1.0",
+    "eslint-plugin-only-warn": "^1.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-sonarjs": "^0.17.0",
+    "prettier": "^2.8.1",
+    "rimraf": "^3.0.2",
+    "stylelint": "^14.16.1",
+    "stylelint-config-clean-order": "^2.3.0",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.6.0",
+    "stylelint-formatter-pretty": "^3.1.1",
+    "stylelint-order": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@7.21.0"
 }
