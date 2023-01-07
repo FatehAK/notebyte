@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://notebyte.onrender.com/">
     <img width="180" height="180" hspace="10"
-      src="https://notebyte.onrender.com/img/logo.png" alt="notebyte logo">
+      src="https://images2.imgbox.com/b2/7f/nKTDgRY6_o.png" alt="notebyte logo">
   </a>
   <h1>Notebyte</h1>
   <img src="https://img.shields.io/github/package-json/v/fatehak/notebyte" alt="version" />
