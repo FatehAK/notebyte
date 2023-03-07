@@ -15,7 +15,7 @@ Jot down your thoughts with this simple note taking web app.
 
 View the app live - https://notebyte.onrender.com/
 
-## Tech Stack
+## Uses
 
 - Node.js backend
 - ExpressJS for routes and session
