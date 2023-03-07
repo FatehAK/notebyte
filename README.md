@@ -11,8 +11,7 @@
 
 </div>
 
-Jot down your thoughts with this simple note taking application. It uses **Node.js** for its backend and the routes are managed by **ExpressJS** with **EJS** (Embedded JavaScript) for dynamic 
-templating. It makes note creation easy with added timestamps and the notes are stored on **MongoDB**.
+Jot down your thoughts with this simple note taking application. It uses **Node.js** for its backend and the routes are managed by **ExpressJS** with **EJS** (Embedded JavaScript) for dynamic templating. It makes note creation easy with added timestamps and the notes are stored on **MongoDB**.
 
 View the app live - https://notebyte.onrender.com/
 

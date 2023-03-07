@@ -22,7 +22,7 @@
     "eslint-fix": "pnpm eslint-check --fix"
   },
   "dependencies": {
-    "body-parser": "^1.20.1",
+    "body-parser": "^1.20.2",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
@@ -30,22 +30,21 @@
   },
   "devDependencies": {
     "concurrently": "^7.6.0",
-    "eslint": "^8.31.0",
-    "eslint-config-prettier": "^8.5.0",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.7.0",
     "eslint-config-semistandard": "^17.0.0",
     "eslint-formatter-pretty": "^4.1.0",
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-sonarjs": "^0.17.0",
-    "prettier": "^2.8.1",
-    "rimraf": "^3.0.2",
-    "stylelint": "^14.16.1",
-    "stylelint-config-clean-order": "^2.3.0",
-    "stylelint-config-prettier": "^9.0.4",
-    "stylelint-config-standard": "^29.0.0",
-    "stylelint-declaration-block-no-ignored-properties": "^2.6.0",
+    "eslint-plugin-sonarjs": "^0.18.0",
+    "prettier": "^2.8.4",
+    "rimraf": "^4.3.1",
+    "stylelint": "^15.2.0",
+    "stylelint-config-clean-order": "^5.0.0",
+    "stylelint-config-standard": "^30.0.1",
+    "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
     "stylelint-formatter-pretty": "^3.1.1",
-    "stylelint-order": "^5.0.0"
+    "stylelint-order": "^6.0.3"
   },
   "engines": {
     "node": ">=18"
